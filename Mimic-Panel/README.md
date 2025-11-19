@@ -1,4 +1,4 @@
-# Manage up to 4 Fleischmann Turnout
+# Manage up to 4 Fleischmann Turnouts
 
 ## Key Features
 * DCC decoded input on Arduino Pin 2
