@@ -31,4 +31,4 @@ see DCC decoder information in its directory
 
 ## Pictures
 
-![MimicPanelPCB](Mimic-Panel/images/PCB_PCB_Mimic-Panel_2025-11-19.png)
+![MimicPanelPCB](Mimic-Panel/images/PCB_PCB_Mimic-Panel_2025-11-19.png?raw=true)
