@@ -19,7 +19,7 @@
 #define T4_LED_RELAY_PIN 11
 // DCC decoder input
 #define DCC_INPUT_PIN 2
-#define DCC_ACK_PIN   3
+// #define DCC_ACK_PIN   3
 
 // DCC constant
 #define DECODER_ADDR  40
@@ -69,11 +69,11 @@ void notifyCVResetFactoryDefault() {
   Dcc.setCV(CV_ACCESSORY_DECODER_ADDRESS_MSB, DECODER_ADDR >> 8);  
 }
 
-void notifyCVAck(void) {
-  digitalWrite(DCC_ACK_PIN, HIGH);
-  delay(8);  
-  digitalWrite(DCC_ACK_PIN, LOW);
-}
+// void notifyCVAck(void) {
+//   digitalWrite(DCC_ACK_PIN, HIGH);
+//   delay(8);  
+//   digitalWrite(DCC_ACK_PIN, LOW);
+// }
 
 void setup() {
   // put your setup code here, to run once:
@@ -85,9 +85,9 @@ void setup() {
     digitalWrite(turnouts[turnoutIdx].buttonPin, HIGH); // Write the button is HIGH when released, make test the LOW in the loop() for pressed
     pinMode(turnouts[turnoutIdx].relayLedPin, OUTPUT);
   }
+  // pinMode(DCC_ACK_PIN, OUTPUT);
 
   // init the NMRA DCC library
-  pinMode(DCC_ACK_PIN, OUTPUT);
   Dcc.pin(digitalPinToInterrupt(DCC_INPUT_PIN), DCC_INPUT_PIN, 1);
   Dcc.init(MAN_ID_DIY, 1, FLAGS_MY_ADDRESS_ONLY | FLAGS_DCC_ACCESSORY_DECODER, 0);
 }
